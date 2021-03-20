@@ -1,34 +1,17 @@
-/*
-Theme Name: Lotus Creation theme
-Theme URI: http://lotuscreation.in/
-Author: Webnini team
-Author URI: lotus Creation
-Description: Lotus Creation is a leading event planning & management company based in Kolkata. We started with a purpose to provide one stop solutions for all your event related queries.
-Tags: Services, Event, Activation, Exhibition
-Version: 1.0.0
-Requires at least: 5.0
-Tested up to: 5.4
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: lotus Creation
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-
 .section-title h1{
-	text-align: center;
-	margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 .section-title h2 {
     font-size: 30px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
+    font-style: initial;
 }
 section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
  }
  .tabs-style-03 .icon-tabs .nav-tabs>li>a {
     width: 35px;
@@ -44,7 +27,7 @@ section {
     font-size: 20px;
 }
 .tabs-style-03 .icon-tabs .nav-tabs>li>a {
-	border: 2px solid #999999;
+    border: 2px solid #999999;
 }
 i:before {
     margin-left: -10px;
@@ -99,6 +82,7 @@ ul.top-icon li a{
 ul.top-icon li a i{
     width: 100%;
     text-align: center;
+    line-height: 1.5;
 }
 ul.top-icon li a i:before{
     margin-left:0;
@@ -158,6 +142,17 @@ footer h5.aside-title {
     font-size: 22px;
 }
 
+.active_1{
+    background-color: red !important;
+    color: honeydew;
+}
+
+.active-nav{
+    background-color: #E79400 !important;
+    color: honeydew !important;
+}
+
+
 /*pagination*/
 #example{
     display: table;
@@ -196,6 +191,7 @@ textarea.md-textarea{
 #feature h4{
     font-weight: 600;
     color: #e02566;
+    padding-top: 0;
 }
 .list-style-02 li:before{
     display: none;
@@ -215,14 +211,119 @@ textarea.md-textarea{
 .section-title p.cardo-font{
     font-size: 24px;
 }
+ul.sis-comp{
+    display: table;
+    margin: 0 auto;    
+    padding-top: 20px;
+}
+ul.sis-comp li{
+    list-style: none;
+    float: left;
+    padding: 0 20px;
+    border-right: 1px solid #775a90;
+}
+ul.sis-comp li:last-child{
+    border-right: 0px;
+}
+ul.sis-comp li img{
+    max-height: 45px;
+    width: auto;
+}
+.logo img{
+    padding: 5px 0px;
+}
+.slick-track .client-logo img{
+    width:auto;
+    height: 100px;
+}
+.dark-bg {
+    background-color: #8c3b8c;
+}
+
+.text_white{
+    color: white !important;
+}
+h2.cardo-font{
+    font-style: italic;
+}
+.item{
+    position: relative;
+    width: 100%;
+}
+.carousel-inner>.item {
+    -webkit-transition: -webkit-transform 1.7s ease-in-out !important;
+    -o-transition: -o-transform 1.7s ease-in-out !important;
+    transition: transform 1.7s ease-in-out !important;
+}
+.item p{
+    font-weight: 200;
+    font-size: 30px !important;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.63);
+    color: #fff;
+    left: 15%;
+    width: calc(100% - 30%);
+}
+.item p span{
+    width: 85%;
+    font-size: 13px !important;
+    text-align: right;
+    font-weight: 50 !important;
+    display: block;
+}
+.blue-bg{
+    background-color: #e6f8f9;
+}
+.post-tags{
+    /*float: left;*/
+}
+.widget_tag_cloud{
+    display: table;
+}
+/*=== Lightbox CSS ===*/
+    .gallery {
+        list-style: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .gallery li {
+        float: left;
+        margin: 4px;
+    }
+    /*~~~~~~~ Thank you page ~~~~~~~~~*/
+    .thanks img{
+        margin: 0 auto;
+        display: block;
+    }
+    .thanks p{
+        text-align: center;
+        padding-top: 20px;
+    }
 /*~~~~~~~~~~~~~~~~~~ Responsive CSS ~~~~~~~~~~~~~~~~~~~~~*/
 @media (min-width: 1024px){
     nav.navbar.bootsnav.navbar-transparent.white,
     nav.navbar.bootsnav.navbar-transparent.dark {
-        background: rgb(255 255 255 / 35%)
+        background: rgb(255 255 255 / 60%)
     }
     ul.nav > li > a{
         color: #000 !important;
+    }
+    .item p{
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;
+    }
+}
+@media(max-width: 1023px) and (min-width: 991px){
+    .item p{
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 50px;
     }
 }
 @media (min-width: 992px){
@@ -235,35 +336,102 @@ textarea.md-textarea{
     }
     nav.navbar.bootsnav.navbar-fixed {
         margin-top: 43px;
-    }    
+    }  
 }
 @media (max-width: 991px){
     .page-title {
         top: 125px;
     }
+    .carousel-inner {
+        margin-top: 100px;
+    }
+    .item p {
+        top: 45%;
+    }
+    .testimonial-item .testimonial-content {
+        padding: 10px;
+    }
 }
 @media (min-width: 767px) and (max-width: 991px){
-	.tabs-style-03 .icon-tabs .nav-tabs>li {
-    	width: 14%;
+    .tabs-style-03 .icon-tabs .nav-tabs>li {
+        width: 14%;
     }
    .tabs-style-03 .icon-tabs .nav-tabs>li:after {
-    	left: 86%;
-    	width: 16px;
-	}
+        left: 86%;
+        width: 16px;
+    }
 }
-
+@media(max-width: 768px){
+    ul.mile{
+        padding: 0 5%;
+    }
+}
 @media (min-width: 481px) and (max-width: 766px){
-	.tabs-style-03 .icon-tabs .nav-tabs>li {
-	    width: 14%;
-	}
+    .tabs-style-03 .icon-tabs .nav-tabs>li {
+        width: 14%;
+    }
+    .item p {
+        font-weight: 200;
+        font-size: 25px !important;
+        line-height: 35px;
+        left: 10%;
+        width: calc(100% - 20%);
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px){
-	.tabs-style-03 .icon-tabs .nav-tabs>li{
-	    width: 14%;
-	}
-	.tabs-style-03 .icon-tabs .nav-tabs>li:after{
-	    left: 83%;
-	    width: 35%;
-	}
+    .tabs-style-03 .icon-tabs .nav-tabs>li{
+        width: 14%;
+    }
+    .tabs-style-03 .icon-tabs .nav-tabs>li:after{
+        left: 83%;
+        width: 35%;
+    }
+}
+@media(max-width: 499px){
+    ul.sis-comp li img {
+        max-height: 30px;
+    }
+    ul.sis-comp li {
+        padding: 0px 10px;
+    }
+    #about .pl-80{
+        padding-left: 0px;
+    }
+    #about .pr-70{
+        padding-right: 0px;
+    }
+}
+@media(max-width: 480px){
+    .item p {
+        font-weight: 200;
+        font-size: 18px !important;
+        line-height: 25px;
+        left: 5%;
+        width: calc(100% - 10%);
+    }
+    .carousel-inner {
+        margin-top: 160px;
+    }
+}
+@media(min-width: 337px) and (max-width: 991px){
+    nav.navbar.bootsnav.navbar-fixed{
+        margin-top: 93px;
+    }
+}
+@media(max-width: 392px){
+    .top-bar .top-mail{
+        text-align: center;
+        line-height: 18px;
+    }
+    .top-bar .icofont-send-mail {
+        float: none;
+    }
+    nav.navbar.bootsnav.navbar-transparent .logo {
+        height: 50px;
+    }
+    .top-mail i,
+    .top-tel i{
+        display: none;
+    }
 }

@@ -6,7 +6,7 @@
           <div class="col-sm-6 col-md-3">
             <div class="widget widget-links xs-mt-20 xs-mb-20">
               <div class="logo-footer">
-                <a href="index.php"><img class="img-responsive" src="assets/images/lotus-logo_w.png" alt=""></a>
+                <a href="index.php"><img class="img-responsive" src="<?php echo get_theme_file_uri() . '/assets/images/lotus-logo_w.png';?>" alt=""></a>
               </div>              
               <ul>
                 <li><a class="page-scroll" href="index.php">Home</a></li>
@@ -19,21 +19,25 @@
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
-            <h5 class="widget-title">Address</h5>
+              <?php if( is_active_sidebar('address-widget') ) : ;?>
+                <?php dynamic_sidebar('address-widget' ); ?>
+              <?php endif; ?>
+
+            <!-- <h5 class="widget-title">Address</h5>
             <div class="widget widget-text">
               <p>The Chambers, 1865, Rajdanga Main Road. Room no-604, Kolkata-700107</p>
               <p class="mt-20 mb-0"><a href="#">+91 9903954695</a></p>
               <p class="mt-0"><a href="info@lotuscreation.in" target="_blank">info@lotuscreation.in</a>
               <a href="mailto:hr.lotusinfo@gmail.com" target="_blank">hr.lotusinfo@gmail.com</a>
               </p>
-            </div>
+            </div> -->
             <div class="social-icons-style-06 mb-50">
-            <h5 class="aside-title">Follow Us</h5>
+            <!-- <h5 class="aside-title">Follow Us</h5>
             <ul class="xs-icon">
               <li><a class="icon facebook" href="#."><i class="icofont icofont-social-facebook"></i></a></li>
               <li><a class="icon twitter" href="#."><i class="icofont icofont-social-twitter"></i></a></li>
               <li><a class="icon tumblr" href="#."><i class="icofont icofont-social-tumblr"></i></a></li>
-            </ul>
+            </ul> -->
           </div>
           </div>
           <div class="col-sm-6 col-md-3">

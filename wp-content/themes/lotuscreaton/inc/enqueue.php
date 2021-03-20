@@ -5,10 +5,11 @@
 
 
 function lotus_scripts(){
-	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	//Core Style Sheets ~~~~~~~~~~~
 	wp_enqueue_style('master-css', get_template_directory_uri() . '/assets/css/master.css' );
+	wp_enqueue_style('jquery-lightbox-css', get_template_directory_uri() . '/assets/css/jquery.lightbox.css' );
+	wp_enqueue_style('animate-css', get_template_directory_uri() . '/assets/css/animate.css' );
 
 	//Responsive Style Sheets
 	wp_enqueue_style('responsive-css', get_template_directory_uri() . '/assets/css/responsive.css');
@@ -28,6 +29,9 @@ function lotus_scripts(){
 
 	//Typewriter Addon  ~~~~~~~~~~~
 	wp_enqueue_style('typewriter-css', get_template_directory_uri() . '/revolution/css/typewriter.css');
+
+	//Theme style  ~~~~~~~~~~~
+	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	// Revolution js Files  ~~~~~~~~~~~
 	wp_enqueue_script('jquery-themepunch-tools-min-js', get_template_directory_uri() . '/revolution/js/jquery.themepunch.tools.min.js', array(), '1.6.9', true);

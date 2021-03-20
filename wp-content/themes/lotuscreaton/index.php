@@ -4,28 +4,33 @@
   <?php get_template_part('/template-parts/slide', 'slide' ); ?>
 <!--== Marketing Slider End ==-->
 
+<?php the_title(); ?>
+<?php the_content(); ?>
 
-  <!--== What We Offer Start ==-->
-  <section id="feature" class="white-bg">
+  <!--== Welcome Section ==-->
+  <!-- <section id="feature" class="white-bg">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-sm-10 col-xs-12 centerize-col">
           <div class="section-title text-center">
             <h2 class="cardo-font default-color">Welcome to Lotus Creation </h2>
             <h1>Best Event Management Company in Kolkata</h1>
-            <p class="cardo-font default-color">Starting with ideation, creation, planning, and execution, our aim is to provide complete branding solutions to our clients.</p>
+            <p class="cardo-font default-color">Starting with ideation, creation, planning, and execution, our aim is to provide complete branding solutions to our clients.
+            </p>
             <p>Lotus Creation is a leading event planning & management company based in Kolkata. We started with a purpose to provide one stop solutions for all your event related queries. 
-We are specialise in one-roof services like ATL/BTL activities, corporate events, celebrity management, branding management, Bollywood nights, live music concert, DJ Nights, event set-up management and wedding and reception planning management. You can choose from our wide range of event packages or ask our event manager to customise one for you.</p>
-<p>We take much pride in stating that each member of our team has years of experience in the industry. They know how to plan and manage events of every size. We believe that the expertise and dedication of our team is the base of our success. They value the reputation earned by us over the years as the best corporate event management company in Kolkata and always rely on a client-oriented approach.</p>
+            We are specialise in one-roof services like ATL/BTL activities, corporate events, celebrity management, branding management, Bollywood nights, live music concert, DJ Nights, event set-up management and wedding and reception planning management. You can choose from our wide range of event packages or ask our event manager to customise one for you.
+            </p>
+            <p>We take much pride in stating that each member of our team has years of experience in the industry. They know how to plan and manage events of every size. We believe that the expertise and dedication of our team is the base of our success. They value the reputation earned by us over the years as the best corporate event management company in Kolkata and always rely on a client-oriented approach.
+            </p>
           </div>
           </div>
         </div>
     </div>
-  </section>
-  <!--== What We Offer End ==-->
+  </section> -->
+  <!--== Welcome Section End ==-->
 
   <!--== Process Start ==-->
-  <section class="dark-bg">
+  <!-- <section class="dark-bg">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-8 col-xs-12 xs-mb-50 centerize-col">
@@ -58,11 +63,11 @@ We are specialise in one-roof services like ATL/BTL activities, corporate events
          </div>
        </div>
     </div>
-  </section>
+  </section> -->
   <!--== Process End ==-->
 
   <!--== Process Start ==-->
-  <section class="section-title">
+  <!-- <section class="section-title">
     <div class="container">
       <h2>Our Expertise</h2>
       <div class="row service-box-style-06 service-slider">        
@@ -155,13 +160,13 @@ We are specialise in one-roof services like ATL/BTL activities, corporate events
 
       </div>
     </div>
-  </section>
+  </section> -->
   <!--== Process End ==-->
 
       <!--=== About Us Start ======-->
-  <section class="lg-section dark-bg" id="about">
+  <!-- <section class="lg-section dark-bg" id="about">
     <div class="col-md-6 col-sm-6 bg-flex bg-flex-left">
-      <div class="bg-flex-holder bg-flex-cover" style="background-image: url(<?php echo get_theme_file_uri() . '/assets/images/bg-left-img-2.jpg';?>);"></div>
+      <div class="bg-flex-holder bg-flex-cover" style="background-image: url(<?php //echo get_theme_file_uri() . '/assets/images/bg-left-img-2.jpg';?>);"></div>
     </div>
     <div class="container-fluid">
       <div class="col-md-5 col-sm-6 col-md-offset-6 col-sm-offset-6 pl-80 pr-70">
@@ -173,19 +178,19 @@ We are specialise in one-roof services like ATL/BTL activities, corporate events
         <p class="mt-30"><a class="btn btn-lg btn-color btn-circle" href="services.php">Read more</a></p>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--=== About Us End ======-->
 
-  <section id="feature" class="white-bg">
+  <!-- <section id="feature" class="white-bg">
   <div class="container-fluid">
     <div class="row tabs-style-03 mt-50 section-title">
         <h2>Why Choose us?</h2>
         <div class="col-md-6 col-sm-6 col-xs-12 xs-mb-50 transition-none">
           <div class="icon-tabs">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4"> -->
                   <!--== Nav tabs ==-->
-                  <ul class="nav nav-tabs text-center" role="tablist">
+                  <!-- <ul class="nav nav-tabs text-center" role="tablist">
                     <li role="presentation" class="active"><a href="#whyChoose-1" role="tab" data-toggle="tab">1</a></li>
                     <li role="presentation"><a href="#whyChoose-2" role="tab" data-toggle="tab">2</a></li>
                     <li role="presentation"><a href="#whyChoose-3" role="tab" data-toggle="tab">3</a></li>
@@ -196,9 +201,9 @@ We are specialise in one-roof services like ATL/BTL activities, corporate events
                   </ul>
                 </div>
 
-                <div class="col-md-8">                  
+                <div class="col-md-8">  -->                 
                   <!--== Tab panes ==-->
-                  <div class="tab-content text-center">                    
+                  <!-- <div class="tab-content text-center">                    
                     <div role="tabpanel" class="tab-pane fade in active" id="whyChoose-1">
                       <div class="text-left">
                         <h3 class="default-color font-800 mt-0 font-700">Renowned Branding Activation company in Kolkata</h3>
@@ -249,19 +254,19 @@ We are specialise in one-roof services like ATL/BTL activities, corporate events
             </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
-          <img src="<?php echo get_theme_file_uri() . '/assets/images/why-choose.JPG';?>" alt="mockup" class="img-responsive"/>
+          <img src="<?php //echo get_theme_file_uri() . '/assets/images/why-choose.JPG';?>" alt="mockup" class="img-responsive"/>
           <div class="video-box_overlay">
             <div class="center-layout">
-            <div class="v-align-middle">
+            <div class="v-align-middle"> -->
              <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=sU3FkzUKHXU">
               <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div> -->
-              </a> </div>
+              <!-- </a> </div>
             </div>
           </div>
-        </div> <!-- col-md-6 col-sm-6 col-xs-12 -->
-    </div>
+        </div>  --><!-- col-md-6 col-sm-6 col-xs-12 -->
+    <!-- </div>
   </div>
-  </section>
+  </section> -->
 
   <!--== Portfolio Start ==-->
 

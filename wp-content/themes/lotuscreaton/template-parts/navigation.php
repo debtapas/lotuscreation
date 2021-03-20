@@ -44,7 +44,20 @@
       <!--== End Header Navigation ==-->
 
       <!--== Collect the nav links, forms, and other content for toggling ==-->
-      <div class="collapse navbar-collapse" id="navbar-menu">
+      <?php
+        wp_nav_menu(
+          array(
+            'theme_location'  =>  'header-menu',
+            'container'       =>  'div',
+            'container_class' =>  'collapse navbar-collapse',
+            'container_id'    =>  'navbar-menu',
+            'menu_class'      =>  'nav navbar-nav navbar-right', //add this class in ul tag
+            'item_wrap'       =>  '<ul data-in="fadeIn" data-out="fadeOut">'
+            //'menu_id'         =>  'navbar-menu' //add this id in ul tag
+          )
+        );
+      ?>
+      <!-- <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
           <li><a class="page-scroll active" href="index.php">Home</a></li>
           <li><a class="page-scroll" href="about.php">About us</a></li>
@@ -53,7 +66,7 @@
           <li><a class="page-scroll" href="career.php">Career</a></li>          
           <li><a class="page-scroll" href="blog.php">Blog</a></li>
           <li><a class="page-scroll" href="contact.php">Contact</a></li>
-          <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts</a>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts</a>
             <ul class="dropdown-menu">
               <li><a href="home-main.html">Main Demo</a></li>
               <li><a href="home-creative-agency.html">Home Creative Agency</a></li>
