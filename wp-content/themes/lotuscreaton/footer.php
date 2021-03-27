@@ -6,20 +6,33 @@
           <div class="col-sm-6 col-md-3">
             <div class="widget widget-links xs-mt-20 xs-mb-20">
               <div class="logo-footer">
-                <a href="index.php"><img class="img-responsive" src="<?php echo get_theme_file_uri() . '/assets/images/lotus-logo_w.png';?>" alt=""></a>
-              </div>              
-              <ul>
+                <a href="index.php"><img class="img-responsive" src="<?php
+                $footer_logo = get_field('footer_logo', 'option');
+                echo $footer_logo['url'];
+                 //echo get_theme_file_uri() . '/assets/images/lotus-logo_w.png';?>" alt=""></a>
+              </div>
+              <?php
+                  wp_nav_menu(
+                    array(
+                      'menu'            =>  'footer-menu',
+                      //'menu_class'      =>
+                      'container'       =>  'ul'
+                      //'container_class' =>
+
+                    ));
+                ?>             
+              <!-- <ul>                
                 <li><a class="page-scroll" href="index.php">Home</a></li>
                 <li><a class="page-scroll" href="about.php">About</a></li>
                 <li><a class="page-scroll" href="portfolio.php">Portfolio</a></li>
                 <li><a class="page-scroll" href="services.php">Services</a></li>
                 <li><a class="page-scroll" href="blog.php">Blog</a></li>
                 <li><a class="page-scroll" href="#contact">Contact</a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
-              <?php if( is_active_sidebar('address-widget') ) : ;?>
+              <?php if( is_active_sidebar('address-widget') ) : ?>
                 <?php dynamic_sidebar('address-widget' ); ?>
               <?php endif; ?>
 
@@ -30,21 +43,24 @@
               <p class="mt-0"><a href="info@lotuscreation.in" target="_blank">info@lotuscreation.in</a>
               <a href="mailto:hr.lotusinfo@gmail.com" target="_blank">hr.lotusinfo@gmail.com</a>
               </p>
-            </div> -->
+            </div>
             <div class="social-icons-style-06 mb-50">
-            <!-- <h5 class="aside-title">Follow Us</h5>
+            <h5 class="aside-title">Follow Us</h5>
             <ul class="xs-icon">
               <li><a class="icon facebook" href="#."><i class="icofont icofont-social-facebook"></i></a></li>
               <li><a class="icon twitter" href="#."><i class="icofont icofont-social-twitter"></i></a></li>
               <li><a class="icon tumblr" href="#."><i class="icofont icofont-social-tumblr"></i></a></li>
-            </ul> -->
-          </div>
+            </ul>
+          </div> -->
           </div>
           <div class="col-sm-6 col-md-3">
-            <div class="widget widget-text widget-links">
+            <?php if( is_active_sidebar('about-widget') ) : ?>
+                <?php dynamic_sidebar('about-widget'); ?>
+              <?php endif; ?>
+            <!-- <div class="widget widget-text widget-links">
               <h5 class="widget-title">About</h5>
               <p>They specialise in one-roof services like ATL/BTL activities, corporate events, celebrity management, branding management, Bollywood nights, live music concert, DJ Nights, event set-up management and wedding and reception planning management. You can choose from our wide range of event packages or ask our event manager to customise one for you.</p>
-            </div>
+            </div> -->
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="widget widget-links sm-mt-20 sm-mt-20">
@@ -159,7 +175,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="copy-right text-center">© Copyrights 2020 Lotus Creation. All Rights Reserved. | Designed By <a href="http://webnini.co.in/" target="_blank" rel="noopener">Webnini</a>
+            <div class="copy-right text-center">© Copyrights <?php the_date('Y');?> Lotus Creation. All Rights Reserved. | Designed By <a href="<?php the_field('copyright_website_link');?>" target="_blank" rel="noopener">Webnini</a>
             </div>
         </div>
       </div>

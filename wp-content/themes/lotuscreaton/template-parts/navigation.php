@@ -3,12 +3,12 @@
       <div class="row">
         <div class="col-md-3 col-sm-12">
           <div class="top-tel">
-            <i class="icofont icofont-ui-touch-phone"></i></i> <a href="tel:9903954695">(+91) 9903954695</a>
+            <i class="icofont icofont-ui-touch-phone"></i></i> <a href="tel:<?php the_field('to_call', 'option');?>"><?php the_field('phone_no', 'option');?></a>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="top-mail">
-          <i class="icofont icofont-send-mail"></i> <a href="mailto:info@lotuscreation.in">info@lotuscreation.in</a>, <a href="mailto:hr.lotusinfo@gmail.com">hr.lotusinfo@gmail.com</a>            
+          <i class="icofont icofont-send-mail"></i> <a href="mailto:<?php the_field('to_mail1', 'option');?>"><?php the_field('mail1', 'option');?></a>, <a href="mailto:<?php the_field('to_mail2', 'option');?>"><?php the_field('mail2', 'option');?></a>            
           </div>
         </div>
         <div class="col-md-3 col-sm-12">
@@ -39,7 +39,16 @@
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index.php"> <img class="logo logo-display" src="assets/images/logo.png" alt=""> <img class="logo logo-scrolled" src="assets/images/logo.png" alt=""> </a> </div>
+          <?php
+            // $thumb = "thumbnail"; 
+            // $logo = get_field('logo');
+            // $site_logo = wp_get_attachment_image_src( $logo, $thumb );
+            // print_r($site_logo); die();
+          ?>
+        <div class="logo"> <a href="index.php"> <img class="logo logo-display" 
+          src="<?php
+            $logo = get_field('logo', 'option');
+            echo $logo['url'];?>" alt=""> <img class="logo logo-scrolled" src="<?php echo $logo['url'];?>" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 

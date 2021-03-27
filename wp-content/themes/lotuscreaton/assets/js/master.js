@@ -299,7 +299,7 @@
 		slidesToShow: 5,
         slidesToScroll: 1,
 		autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 1500,
 		dots:false,
 		prevArrow: false,
     	nextArrow: false,
@@ -571,34 +571,34 @@
 
   /* ===== CONTACT FORM ===== */
 
-	$(function () {
+	// $(function () {
 
-    $('#contact-form').validator();
+    // $('#contact-form').validator();
 
-    $('#contact-form').on('submit', function (e) {
+    // $('#contact-form').on('submit', function (e) {
 
-        if (!e.isDefaultPrevented()) {
-            var url = "assets/php/contact.php";
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = data.class;
-                    var messageText = data.message;
+    //     if (!e.isDefaultPrevented()) {
+    //         var url = "assets/php/contact.php";
+    //         $.ajax({
+    //             type: "POST",
+    //             url: url,
+    //             data: $(this).serialize(),
+    //             success: function (data)
+    //             {
+    //                 var messageAlert = data.class;
+    //                 var messageText = data.message;
 
-                    var alertBox = '<div class="' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    	});
-	});
+    //                 var alertBox = '<div class="' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+    //                 if (messageAlert && messageText) {
+    //                     $('#contact-form').find('.messages').html(alertBox);
+    //                     $('#contact-form')[0].reset();
+    //                 }
+    //             }
+    //         });
+    //         return false;
+    //     }
+    // 	});
+	// });
 
 	/* ===== REVOLUTION SLIDER LANDING ===== */
 
@@ -1253,5 +1253,26 @@
 
 
 	});
+
+$(document).ready(function(){
+	function loadDiv(page){
+		$.ajax({
+			url: "ajax-pagination.php",
+			type: "POST",
+			Data: {page_no : page},
+			success: function(data){
+				$('#table-data').html(data);
+			}
+		});
+	}
+	loadDiv();
+
+	// pagination code
+	$(document).on("click",".pagination a",function(e){
+		e.preventDefault();
+		var page_id = $(this).attr("id");
+		loadDiv(page_id);
+	})
+})
 
 /*End Jquery*/

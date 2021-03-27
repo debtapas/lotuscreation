@@ -10,6 +10,8 @@ function lotus_scripts(){
 	wp_enqueue_style('master-css', get_template_directory_uri() . '/assets/css/master.css' );
 	wp_enqueue_style('jquery-lightbox-css', get_template_directory_uri() . '/assets/css/jquery.lightbox.css' );
 	wp_enqueue_style('animate-css', get_template_directory_uri() . '/assets/css/animate.css' );
+	wp_enqueue_style('slick-css', get_template_directory_uri() . '/assets/css/slick.css' );
+	wp_enqueue_style('custom-icons-min', get_template_directory_uri() . '/assets/css/custom-icons.min.css' );
 
 	//Responsive Style Sheets
 	wp_enqueue_style('responsive-css', get_template_directory_uri() . '/assets/css/responsive.css');
@@ -33,6 +35,10 @@ function lotus_scripts(){
 	//Theme style  ~~~~~~~~~~~
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
+	
+	//Javascript Plugins  ~~~~~~~~~~~
+	wp_enqueue_script('jquery-min-js', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '9.9', true);
+
 	// Revolution js Files  ~~~~~~~~~~~
 	wp_enqueue_script('jquery-themepunch-tools-min-js', get_template_directory_uri() . '/revolution/js/jquery.themepunch.tools.min.js', array(), '1.6.9', true);
 	wp_enqueue_script('jquery-themepunch-revolution-min-js', get_template_directory_uri() . '/revolution/js/jquery.themepunch.revolution.min.js', array(), '25.4.7', true);
@@ -53,13 +59,19 @@ function lotus_scripts(){
 	wp_enqueue_script('jquery-swipebox-js', get_template_directory_uri() . '/gallery/jquery.swipebox.js', array(), '2.9', true);
 
 //Javascript Plugins  ~~~~~~~~~~~
-	wp_enqueue_script('jquery-min-js', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '9.9', true);
 	wp_enqueue_script('plugins-js', get_template_directory_uri() . '/assets/js/plugins.js', array(), '9.9', true);
 	wp_enqueue_script('master-js', get_template_directory_uri() . '/assets/js/master.js', array(), '9.9', true);
-	wp_enqueue_script('jquery-min-js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE', array(), '9.9', true);
+	// wp_enqueue_script('jquery-min-js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE', array(), '9.9', true);
 
 //Typewriter Addon   ~~~~~~~~~~~
 	wp_enqueue_script('revolution-addon-typewriter-min-js', get_template_directory_uri() . '/revolution/js/revolution.addon.typewriter.min.js', array(), '9.9', true);
+
+	wp_enqueue_script('jquery-lightbox-js', get_template_directory_uri() . '/assets/js/jquery.lightbox.js', array(), '1.4.1', true);
+
+	wp_enqueue_script('bootstrap-min-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '1.4.1', true);
+	
+//slider js ~~~~~~~~
+	wp_enqueue_script('slider-js', get_template_directory_uri() . '/assets/js/slider.js', array(), '2.0', true);
 
 //Misc ~~~~~~~~~~~
 	wp_enqueue_script('misc-js', get_template_directory_uri() . '/assets/js/misc.js', array(), '9.9', true);
